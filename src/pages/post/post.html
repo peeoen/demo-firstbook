@@ -1,26 +1,28 @@
-<!--
-  Generated template for the PostPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
     <ion-title>post</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
+  <ion-item class="post-content">
+    <button ion-button item-end round class="btn-post" (click)="post()">Post</button>
+  </ion-item>
   <ion-item>
-    <ion-textarea placeholder="What's happening?" 
-        [(ngModel)]="note" name="note" autocomplete="on" autocorrect="on" autosize></ion-textarea>
-   </ion-item>
+    <ion-avatar item-start>
+      <img src="assets/imgs/me-icon.png">
+    </ion-avatar>
+    <ion-textarea #postInput placeholder="What's happening?" [(ngModel)]="note" name="note" autocomplete="on" autocorrect="on"
+    autosize></ion-textarea>
+  </ion-item>
 </ion-content>
+
+
 <ion-footer>
   <ion-toolbar>
-    <ion-title>Footer</ion-title>
+    <ion-buttons left>
+      <ion-icon name="image" class="icon-selector"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-footer>
