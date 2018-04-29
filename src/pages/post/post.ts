@@ -1,5 +1,5 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController, NavParams, TextInput } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
 import { HttpService } from '../../services/http.service';
 
 @Component({
@@ -30,9 +30,8 @@ export class PostPage {
   }
 
   post() {
-    this.http.getSampleData();
+    console.log('test')
   }
-
 
   // protected adjustTextarea(event: any): void {
   //   let textarea: any = event.target;
