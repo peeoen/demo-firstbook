@@ -13,13 +13,13 @@ export class HomePage {
   constructor(public navCtrl: NavController,
     private httpService: HttpService) {
     this.httpService.getPosts().subscribe((posts : any) => {
-      console.log(posts)
       for(let p of posts){
         this.posts.push({
           img: p.sourcePath,
           desc: p.content,
           title: p.title,
-          id: p.postId
+          id: p.postId,
+          createDatetime: p.createDatetime
         })
       }
     })

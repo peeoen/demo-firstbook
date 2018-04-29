@@ -12,6 +12,9 @@ import { Autosize } from '../components/textarea-autosize';
 
 import { HttpService } from '../services/http.service';
 
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,11 @@ import { HttpService } from '../services/http.service';
     StatusBar,
     SplashScreen,
     HttpService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FileTransfer,
+    FileTransferObject,
+    File,
+    Camera
   ]
 })
 export class AppModule {}

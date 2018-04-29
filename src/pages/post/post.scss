@@ -15,5 +15,9 @@ page-post {
     .post-content > .item-inner {
         border-bottom: none !important;
     }
+
+    .icon-selector{
+        z-index: 99999;
+    }
 }
 

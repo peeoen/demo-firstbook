@@ -7,20 +7,26 @@
 
 <ion-content padding>
   <ion-item class="post-content">
-    <button ion-button item-end round class="btn-post" (click)="post()">Post</button>
+    <button ion-button item-end round class="btn-post" (click)="uploadImage()">Post</button>
   </ion-item>
   <ion-item>
     <ion-avatar item-start>
       <img src="assets/imgs/me-icon.png">
     </ion-avatar>
-    <ion-textarea #postInput placeholder="What's happening?" [(ngModel)]="note" name="note" autocomplete="on" autocorrect="on"
-    autosize></ion-textarea>
+    <!-- <ion-textarea #postInput placeholder="What's happening?" [(ngModel)]="note" name="note" autocomplete="on" autocorrect="on"
+    autosize></ion-textarea> -->
+    <ion-textarea #postInput placeholder="What's happening?" [(ngModel)]="note" name="note" autocomplete="on" autocorrect="on"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <img [src]="imageURI" *ngIf="imageURI" alt="Ionic File" width="300" />
   </ion-item>
 </ion-content>
 <ion-footer>
   <ion-toolbar>
     <ion-buttons left>
-      <ion-icon name="image" class="icon-selector"></ion-icon>
+      <button  (click)="getImage()">
+          <ion-icon name="image" class="icon-selector"></ion-icon>
+      </button>
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
