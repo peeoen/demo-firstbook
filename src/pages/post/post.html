@@ -15,10 +15,10 @@
     </ion-avatar>
     <!-- <ion-textarea #postInput placeholder="What's happening?" [(ngModel)]="note" name="note" autocomplete="on" autocorrect="on"
     autosize></ion-textarea> -->
-    <ion-textarea #postInput placeholder="What's happening?" [(ngModel)]="note" name="note" autocomplete="on" autocorrect="on"></ion-textarea>
+    <ion-textarea #postInput placeholder="What's happening?" [(ngModel)]="content" name="content" autocomplete="on" autocorrect="on" autosize></ion-textarea>
   </ion-item>
   <ion-item>
-    <img [src]="imageURI" *ngIf="imageURI" alt="Ionic File" width="300" />
+    <img [src]="base64Imag" *ngIf="base64Imag" alt="Ionic File" width="300" />
   </ion-item>
 </ion-content>
 <ion-footer>

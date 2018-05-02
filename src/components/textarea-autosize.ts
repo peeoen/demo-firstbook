@@ -1,5 +1,7 @@
 import { ElementRef, HostListener, Directive } from '@angular/core';
 
+import { Keyboard } from 'ionic-angular';
+
 @Directive({
   selector: 'ion-textarea[autosize]'
 })
@@ -10,7 +12,8 @@ export class Autosize {
     this.adjustTextarea(textArea);
   }
 
-  constructor(public element:ElementRef) {
+  constructor(public element:ElementRef,
+    private keyboard: Keyboard) {
   }
 
   adjustTextarea(textarea): void {
